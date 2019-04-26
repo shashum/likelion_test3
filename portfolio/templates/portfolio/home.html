@@ -1,0 +1,14 @@
+<head>
+    <title>My First Portfolio</title>
+</head>
+
+<body>
+    <h1>Home</h1>
+    <a href="{%url 'new'%}" class="top-menu">글쓰기</a>
+    {% for post in posts.all %}
+        <div class="container">
+            <h2><a href="post/{{post.id}}/">{{post.name}}</a></h2>
+            <p>{{post.created_date}}</p>
+        </div>
+    {% endfor %}
+</body>
